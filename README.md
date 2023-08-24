@@ -32,10 +32,10 @@ This Django app is designed to perform face recognition and comparison using var
 5. **Eye Distance Calculation**
   The current version of the code calculates eye distance using pixels, which might not yield the most accurate results. We acknowledge that this approach has limitations and plan to update it as we achieve better results through more sophisticated techniques. Inaccuracies may arise due to variations in image resolutions and facial poses. Stay tuned for improvements in this area.
 
-6. **Contributing**
+## Contributing
 
   Contributions are welcome! If you have any ideas or improvements, please open an issue or submit a pull request.
 
-7. **Credits**
+## Credits
 
   This project was developed by Team Alpha. It utilizes various open-source libraries and technologies.
