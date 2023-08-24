@@ -65,6 +65,8 @@
         <p>Precision: {{ precision }}</p>
         {% endif %} {% if recall is not None %}
         <p>Recall: {{ recall }}</p>
+        {% endif %} {% if f1_score is not None %}
+        <p>F1 Score: {{ f1_score }}</p>
         {% endif %}
 
     </div>

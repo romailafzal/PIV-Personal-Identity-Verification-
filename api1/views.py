@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.core.files.storage import FileSystemStorage
+
 import cv2
 import numpy as np
 import face_recognition
@@ -10,7 +10,8 @@ import io
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.metrics import classification_report
+#from django.core.files.storage import FileSystemStorage
+#from sklearn.metrics import classification_report
 import os
 
 
@@ -142,11 +143,13 @@ def faces_match_view(request):
             accuracy = (tp + tn) / (tp + tn + fp + fn)
             precision = tp / (tp + fp) if tp + fp > 0 else 0
             recall = tp / (tp + fn) if tp + fn > 0 else 0
+            f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+
 
 
         try:   
-            print(true_labels)
-            print(predicted_labels)
+            #print(true_labels)
+            #print(predicted_labels)
             confusion = confusion_matrix(true_labels, predicted_labels)
             class_names = ['No Match', 'Match']
             plt.figure(figsize=(8, 6))
@@ -173,6 +176,7 @@ def faces_match_view(request):
                 'accuracy': accuracy,
                 'precision': precision,
                 'recall': recall,
+                'f1_score': f1_score,
 
             }
             return render(request, 'result_templates.html', context)
