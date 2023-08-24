@@ -1,4 +1,5 @@
-# PIV-Personal_Identity_Verification
+# PIV
+#Personal_Identity_Verification
 # Face Recognition and Comparison Django App
 
 This Django app is designed to perform face recognition and comparison using various libraries like OpenCV, face_recognition, dlib, and more. It offers three main functionalities: Face Matching for Two Images, and Face Matching of two folders containing  person images and CNICs.
