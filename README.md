@@ -24,15 +24,19 @@ This Django app is designed to perform face recognition and comparison using var
 - Upload two images.
 - Compare the faces and view the result.
 
-4. **Face Matching of two folders containing person images and CNICs:**
-- Upload two folders of images and  CNIC images.
+4. **About Confusion Matrix**
+- Face Matching of two folders containing person images and CNICs:
 - Match faces, calculate metrics, and view the confusion matrix.
+  In the `faces_match_view` function, the code processes images from two different folders and labels them as true or false based on whether the images have the same filenames. If images in both folders have the same filename, they are labeled as true, and if the filenames are different, they are labeled as false. It's important to note that this filename-based labeling doesn't guarantee the images are actually similar; the similarity can only be inferred from the filenames. Users should ensure that images with matching filenames do indeed contain similar faces.
 
+5. **Eye Distance Calculation**
 
-## Contributing
+The current version of the code calculates eye distance using pixels, which might not yield the most accurate results. We acknowledge that this approach has limitations and plan to update it as we achieve better results through more sophisticated techniques. Inaccuracies may arise due to variations in image resolutions and facial poses. Stay tuned for improvements in this area.
+
+6. **Contributing**
 
 Contributions are welcome! If you have any ideas or improvements, please open an issue or submit a pull request.
 
-## Credits
+7. **Credits**
 
 This project was developed by Team Alpha. It utilizes various open-source libraries and technologies.
